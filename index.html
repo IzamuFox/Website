@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<title>Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Canela:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<div class="about-wrap">
+  <header id="about" class="about">
+    <img src="images/profile_pic.png" alt="Andrey Konnov">
+
+    <div class="about-content">
+      <h1>Andrey Konnov</h1>
+      <p>Ecology student</p>
+      <p>Astana, Kazakhstan.</p>
+      <div class="about-cv">
+        <a class="cv-link" href="files/CV_Andrey_Konnov.pdf" target="_blank" > View CV </a>
+      </div>
+
+      <p>
+        I'm a final-year BSc student in Ecology and Environmental Engineering, and I have a strong passion for using GIS technologies to solve complex urban and environmental challenges. My academic preferences starts from analyzing environmental impacts, to focusing on the intersection of GIS, data science, and urban planning.
+      </p>
+      <p>
+        I am proficient with a suite of geospatial tools (ArcGIS Pro, QGIS, Agisoft Metashape) and data collection via drone surveying.
+        Currently exploring the use of smart electronics and spatial analysis to understand human mobility patterns and demographic structures in cities, presented my research on 24th European Colloquium on Theoretical and Quantitative Geography in Tallinn, Estonia.
+      </p>
+
+      <div class="about-links">
+        <a href="https://www.linkedin.com/in/andreykonnov/" target="_blank" ="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/IzamuFox" target="_blank" ="GitHub"><i class="fab fa-github"></i></a>
+        <a href="mailto:konnovandrey55@gmail.com" ="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </header>
+</div>
+<hr size="2" color="grey">
+<!-- ================= EDUCATION ================= -->
+<section id="education" class="section">
+  <h2 class="section-title">Education</h2>
+
+  <p class="edu-note">
+    <a href="https://www.topuniversities.com/universities/lomonosov-moscow-state-university" target="_blank">
+      Lomonosov Moscow State University (Almaty, Kazakhstan)
+    </a>
+    - Moscow state university - Ranked №54 in Europe and №105 globally (QS World University Rankings)
+  </p>
+
+  <div class="timeline">
+    <article class="timeline-item">
+      <div class="timeline-time">2022 — 2026</div>
+      <div class="timeline-body">
+        <h3>BSc in Environmental Management and Ecology</h3>
+        <h4>Faculty of Geography, Moscow State University (Kazakh Branch)</h4>
+        <span class="timeline-meta">Astana, Kazakhstan</span>
+      </div>
+    </article>
+    <div class="timeline">
+      <article class="timeline-item">
+        <div class="timeline-time">2024 — 2025</div>
+        <div class="timeline-body">
+          <h3>Academic Exchange Year</h3>
+          <h4>Lomonosov Moscow State University (Main Campus)</h4>
+          <span class="timeline-meta">Moscow, Russia</span>
+        </div>
+      </article>
+
+</section>
+
+
+<!-- ================= PORTFOLIO ================= -->
+<h2 class="section-title">Portfolio</h2>
+<section class="portfolio" id="portfolio">
+<div class="portfolio-item" onclick="openModal('images/ECTQG_photo.jpg', 'ECTQG conference project', `
+    <div style='text-align: center;'>
+      <p>Radio call signs of consumer electronics as a data source in human geography, Tallinn 2025 </p>
+        <p>
+            <a href='https://ectqg.org' target='_blank'>
+                ECTQG Website
+            </a>
+        </p>
+    </div>`)">
+    <img src="images/ECTQG_photo.jpg" alt="ECTQG Bconference project">
+    <p>ECTQB conference project | <span style="color: #007ACC; font-weight: bold;">ECTQG</span></p>
+</div>
+
+
+        <div class="portfolio-item" onclick="openModal('images/1.png', 'MSU campus: pedestrian flows from Bluetooth observations', `
+    <div style='text-align: center;'>
+      <p><strong>📊 Method:</strong> Approximating pedestrian movement patterns via Bluetooth scanning. Foot traffic correlates with carried devices; Bluetooth-only scanning captures moving people better than stationary routers.</p>
+      <p><strong>📅 Data collection:</strong> Movement estimated via <strong>„device overlap“</strong> — how many device IDs appeared at both locations, suggesting the same person moved through both points.</p>
+      <p><strong>⚠️ Key limitation:</strong> This method is sensitive to sensor placement. Points too close to building entrances or outside pedestrian corridors can capture unrelated passers-by <strong>„parasitic traffic“</strong>, distorting flows. Careful placement, test scans, and understanding detection range are critical.</p>
+      <p><strong>✅ Results:</strong> Despite limitations, the network reveals stable clusters (campus sub-areas) and strongest links between academic buildings, dormitories, and metro access zones.</p>
+          <a href='files/Presentation_ECTQG.pdf' target='_blank'>
+            Open PDF presentation
+            </a>
+        </p>
+    </div>`)">
+    <img src="images/1.png" alt="MSU campus: pedestrian flows from Bluetooth observations">
+    <p> MSU campus: pedestrian flows from Bluetooth observations | <span style="color: #007ACC; font-weight: bold;">ECTQG</span></p>
+</div>
+
+<div class="portfolio-item" onclick="openModal('images/2.jpg', 'Zimnik village (Vologda Oblast): seasonality and “summer cottages“', `
+    <div style='text-align: center;'>
+      <p><strong>💡 Concept:</strong> Using smart device signals (phones, headphones, watches, routers) as a proxy for human presence. Passive Bluetooth/Wi-Fi scanning approximates when and where people stay.</p>
+      <p><strong>📍 Location:</strong> Zimnik village (~81 houses) with few permanent residents; most are <strong>”summer cottages”</strong> for visitors from Cherepovets (~95 km away).</p>
+      <p><strong>📊 Data collection:</strong> Full-year observations (July 2024–June 2025): <strong>”weekend”</strong> snapshots (Saturday evening) vs <strong>”weekday”</strong> snapshots (Sunday evening). Measurements after sunset when people are indoors.</p>
+      <p><strong>📈 Results:</strong> Device counts peak in summer, drop sharply in winter; Bluetooth declines more strongly. <strong>Bluetooth</strong> = younger visitors (wearable devices); <strong>Wi-Fi</strong> = stable households/older age groups (home routers). Winter skews toward Wi-Fi (year-round residents); summer driven by Bluetooth (seasonal arrivals). Map visualizes year-round vs seasonal households, showing how <strong>”human presence”</strong> shifts across the settlement through the year.</p>
+        <p>
+          <a href='files/Presentation_ECTQG.pdf' target='_blank'>
+                Open PDF presentation
+            </a>
+        </p>
+    </div>`)">
+    <img src="images/2.jpg" alt="Zimnik village (Vologda Oblast): seasonality and “summer cottages“">
+    <p> Zimnik village (Vologda, Russia): seasonality and "summer cottages" | <span style="color: #007ACC; font-weight: bold;">ECTQG</span></p>
+</div>
+    
+        <div class="portfolio-item" onclick="openModal('images/3.png', 'Cherepovets: bus passenger flows and the MAC randomization problem', `
+        <div style='text-align: center;'>
+          <p><strong>⚠️ Technical challenge:</strong> Modern iOS/Android mac-address randomization break tracking in long-term studies <strong>”different devices”</strong>, breaking tracking and flow estimation.</p>
+          <p><strong>🔧 Solution:</strong> Collect data inside a moving vehicle (public transport) with very high-frequency scanning (near-continuous logging). Second-by-second records detect identifier changes: <strong>”old”</strong> ID disappears, <strong>”new”</strong> ID appears at the same timestamp, allowing reconnection into a single trip. Setup: laptops with external Bluetooth adapters (phones not ideal due to battery/OS cevices randomize identifiers over time for privacy. One person can appear as severonstraints). </p>
+          <p><strong>✅ Results:</strong> Map demonstrates meaningful mobility structure under privacy constraints. Sample route (bus #27): strongest flows link industrial entry points (metallurgical plant) with residential districts across the river, connecting city center with residential areas—patterns consistent with commuting and daily urban movement.</p>
+          <p>
+          <a href='files/Presentation_ECTQG.pdf' target='_blank'>
+                Open PDF presentation
+            </a>
+        </p>
+        </div>`)">
+        <img src="images/3.png" alt="Cherepovets: bus passenger flows and the MAC randomization problem">
+        <p> Cherepovets: bus passenger flows and the MAC randomization problem | <span style="color: #007ACC; font-weight: bold;">ECTQG</span></p>
+    </div>
+
+<div class="portfolio-item" onclick="openModal('images/4.png', 'Spatial factors shaping outdoor sports comfort in Astana', `
+    <div style='text-align: center;'>
+      <p><strong>🎯 Goal:</strong> Identify where in Astana it's comfortable to train outdoors and what makes some areas better than others.</p>
+      <p><strong>📊 Method:</strong> Started from real behavior—Strava activity heatmap identified 14+ sports hotspots, validated through online athlete survey (training frequency, routes, pros/cons, comfort factor importance).</p>
+      <p><strong>🗺️ GIS analysis:</strong> Translated <strong>”comfort”</strong> into measurable spatial layers: cycling infrastructure (OpenStreetMap), vegetation/residential density (Astana GIS), safety signals (Ministry of Internal Affairs), visual attractiveness (Instagram), accessibility (Google Maps). Weighted overlay on 30 m grid—weights from survey (safety and bike infrastructure strongest, plus greenery and attractiveness).</p>
+      <p><strong>⚠️ Key findings:</strong> Deficit of sports spaces in historic city center and periphery (low-rise housing). Lowest deficit near Ishim river. High demand but unsafe cycling infrastructure; athletes report regular road incident risks. Training requires long corridors (~2 hours, ~50 km)—most spots can't support this.</p>
+
+        <p>
+          <a href='files/Influence_of_Spatial_Factors_on_the_Comfort_of_Sports_Activities.pdf' target='_blank'>
+                Open PDF file
+            </a>
+        </p>
+    </div>`)">
+    <img src="images/4.png" alt="Spatial factors shaping outdoor sports comfort in Astana">
+    <p>Spatial factors shaping outdoor sports comfort in Astana | <span style="color: #02b145; font-weight: bold;">GIS-based suitability mapping</span></p>
+</div>
+
+<div class="portfolio-item" onclick="openModal('images/5.png', 'Belaya Berel Route', `
+    <div style='text-align: center;'>
+      <p><strong>🎨 Goal:</strong> GIS-based assessment of scenic viewpoint quality for tourist route in Katon-Karagay National Park. Make <strong>'aesthetic value'</strong> comparable and transparent through consistent, repeatable scoring.</p>
+      <p><strong>📊 Method:</strong> Five GIS-computed indicators: mountain-peak abundance, perspective depth/variety, water features, landscape naturalness, forest cover. Data: 30m SRTM DEM and Landcover 2020. For each point: created viewshed (1.6 m observer height) as mask for all calculations. Mountain peaks via Topographic Position Index (TPI); perspective depth separates near views (within 1.5 km) and far views (beyond 1.5 km)—higher scores for both. Automated in ArcMap 10.8 (ModelBuilder).</p>
+      <p><strong>💡 Key takeaway:</strong> GIS and remote sensing make scenic evaluation scalable and less subjective by translating <strong>”beauty”</strong> into explicit, comparable indicators. Map helps prioritize viewpoints, photo stops, and interpretive points. Belaya Berel is aesthetically consistent—dominated by high-value panoramas—strong candidate for route planning and promotion.</p>
+        <p>
+            <a href='files/Konnov_Aestetics_RU.pdf' target='_blank'>
+              Open PDF file (in Russian language)
+            </a>
+        </p>
+    </div>`)">
+    <img src="images/5.png" alt="Belaya Berel Route">
+    <p>Coursework: Belaya Berel Route (Katon-Karagay National Park) | <span style="color: #facc00; font-weight: bold;">Aesthetic Landscape Evaluation Map</span></p>
+</div>
+
+<div class="portfolio-item" onclick="openModal('images/6.png', 'Functional Zoning of Karaganda: Land Use, Centers, and Spatial Barriers (2024)', `
+    <div style='text-align: center;'>
+      <p><strong>🗺️ Goal:</strong> Functional zoning map of Karaganda (2024) explaining spatial organization and conflicts (mobility, environmental pressure, land-use mismatches). Translate <strong>”mental map”</strong> into clear GIS scheme showing key function concentration and historical development impact.</p>
+      <p><strong>📊 Method:</strong> Field observations, satellite imagery interpretation, POI/land-use from OpenStreetMap and 2GIS. Main functions: industrial, utility/warehouse, residential (individual, 2–4 storey, 5-storey, high-rise), public–business, recreational, special-use areas. Emphasizes major planning <strong>”axes”</strong> (Nazarbayev Ave, Karl Marx St, Bukhar-Zhyrau Ave) and railway barrier separating New City from South-East.</p>
+      <p><strong>🏗️ Structure:</strong> Strongly polycentric city with development <strong>”cores”</strong> gradually converging. Industrial clusters: Old City mining zone (Kostenko mine, subsidence), South-East (near Fedorovskoe reservoir, open-pit mining), Maikuduk (metal-structure manufacturing since 1960s). Residential morphology records history: 1930s–1950s (low-rise brick), 1960s (<strong>”microdistrict”</strong> patterns, panel five-storey), 2000s (nine-storey, especially South-East and Maikuduk's edge).</p>
+      <p><strong>⚠️ Key issues:</strong> Polycentric structure creates cross-city mobility time costs (peripheral districts ↔ New City). <strong>”Layered”</strong> building pattern (individual + mid/high-rise) intensifies air-quality problems during heating season. Structural deficits: recreation overly concentrated (Central Park dominates), universities/services cluster in few districts, large areas constrained by coal mining legacy (subsidence zones, waste heaps) limiting safe redevelopment.</p>
+
+
+    </div>`)">
+    <img src="images/6.png" alt="Functional Zoning of Karaganda: Land Use, Centers, and Spatial Barriers (2024)">
+    <p>Functional Zoning of Karaganda: Land Use, Centers, and Spatial Barriers (2024) </p>
+</div>
+
+<div class="portfolio-item" onclick="openModal('images/7.gif', 'Mapping Download Speed in Almaty (2020–2025)', `
+    <div style='text-align: center;'>
+      <p><strong>💡 Origin:</strong> On our latest seminar on urban ecology, our teacher Tolegen Akynzhanov showed us an interesting dataset provided by Ookla, based on well-known <strong>”Speedtest”</strong> data. So, I made my own little research based on this data.</p>
+      <p><strong>📊 Animation description:</strong> Each square is a ~500 m grid cell coloured by recorded download speed in Mb/s in Almaty city from 2020 to 2025.</p>
+      <p><strong>📈 Findings:</strong> In 2020, fast connection was concentrated in the city centre, while many peripheral districts were still below 5 Mb/s. By 2025, almost the entire urban area reaches 11–25 Mb/s or more, and low-speed zones shrink to a few scattered pockets on the fringe. It can be seen that the city's development has begun to spread actively to the north, where the Almaty International Airport (ALA) is located.</p>
+
+        <p>
+          <a href='https://www.linkedin.com/feed/update/urn:li:activity:7396893867792351232/' target='_blank'>
+                Open LinkedIn post
+            </a>
+        </p>
+    </div>`)">
+    <img src="images/7.gif" alt="Mapping Download Speed in Almaty (2020–2025)">
+    <p>Mapping Download Speed in Almaty | <span style="color: #ff0000; font-weight: bold;">2020-2025</span> </p>
+</div>
+
+<div class="portfolio-item" onclick="openModal('images/8.gif', 'Functional Zoning of Karaganda: Land Use, Centers, and Spatial Barriers (2024)', `
+    <div style='text-align: center;'>
+      <p><strong>☀️ Goal:</strong> Estimate rooftop solar PV potential in Astana, visualize as building-level annual electricity generation (kWh/year). Map shows which roofs are realistically usable and annual output magnitude across city districts.</p>
+      <p><strong>📊 Method (two-step workflow):</strong></p>
+      <ol>
+        <li><strong>Suitability screening:</strong> Excludes impractical roofs (geometry/orientation constraints, fragmented/too-small areas) → shown as unsuitable on map.</li>
+        <li><strong>Energy-yield calculation:</strong> For remaining roofs, modeled solar input (terrain/roof geometry—slope and aspect—plus shading) converted to annual generation via engineering conversion:</li>
+      </ol>
+      <ul>
+        <li>Usable roof area</li>
+        <li>Installable PV area (packing/spacing factor)</li>
+        <li>Installed capacity</li>
+        <li>Annual kWh (panel efficiency + performance-loss factor: inverter/temperature/soiling)</li>
+      </ul>
+      <p><strong>🗺️ Results:</strong> Map classifies buildings by annual generation bands (&lt;50,000 to &gt;150,000 kWh/year), making spatial differences readable across Astana's districts.</p>
+      <p><strong>💡 Key takeaway:</strong> PV potential highly uneven at building scale—many roofs with modest yield, but smaller share of large, well-oriented roofs concentrates highest annual generation class (efficient deployment targets).</p>
+                    
+        <p>
+          <a href='https://www.linkedin.com/feed/update/urn:li:activity:7400145077395812353/' target='_blank'>
+              Open LinkedIn post
+            </a>
+        </p>
+    </div>`)">
+    <img src="images/8.gif" alt="Functional Zoning of Karaganda: Land Use, Centers, and Spatial Barriers (2024)">
+    <p>Functional Zoning of Karaganda: Land Use, Centers, and Spatial Barriers | <span style="color: #ff0000; font-weight: bold;">2024</span> </p>
+</div>
+
+</section>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+  <span class="close">&times;</span>
+  <div class="modal-content">
+    <img id="modal-image" style="width:100%;border-radius:6px;">
+    <h2 id="modal-title"></h2>
+    <div id="modal-description"></div>
+  </div>
+</div>
+
+<script>
+(function () {
+  const modal = document.getElementById('modal');
+  const img = document.getElementById('modal-image');
+  const title = document.getElementById('modal-title');
+  const desc = document.getElementById('modal-description');
+
+  // Rechange openModal globally
+  window.openModal = function (image, t, d) {
+    img.src = image;
+    title.textContent = t || '';
+    desc.innerHTML = d || '';
+    modal.style.display = 'flex';
+  };
+
+  window.closeModal = function () {
+    modal.style.display = 'none';
+  };
+
+  // Closing List 
+  modal.addEventListener('click', e => {
+    if (e.target === modal) closeModal();
+  });
+
+  document.querySelector('.close').addEventListener('click', closeModal);
+
+  // Checking that window will close "TRUE"
+  document.querySelectorAll('.portfolio-item').forEach(item => {
+    item.addEventListener('click', () => {
+      if (typeof item.onclick === 'function') {
+        item.onclick();
+      }
+    });
+  });
+})();
+</script>
+<footer>
+  © 2026 Andrey Konnov 
+</footer>
+
+</div>
+</body>
+</html>
+
