@@ -13,6 +13,19 @@
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+  #modal-description ul li {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1.2;
+    text-align: left;
+  }
+  #modal-description ul {
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+    margin-left: 50px;
+  }
+</style>
 </head>
 <body>
 
@@ -87,7 +100,7 @@
         </p>
     </div>`)">
     <img src="images/ECTQG_photo.jpg" alt="ECTQG Bconference project">
-    <p>ECTQB conference project | <span style="color: #007ACC; font-weight: bold;">ECTQG</span></p>
+    <p>ECTQG conference project | <span style="color: #007ACC; font-weight: bold;">ECTQG</span></p>
 </div>
 
 
@@ -125,7 +138,7 @@
         <div class="portfolio-item" onclick="openModal('images/3.png', 'Cherepovets: bus passenger flows and the MAC randomization problem', `
         <div style='text-align: center;'>
           <p><strong>⚠️ Technical challenge:</strong> Modern iOS/Android mac-address randomization break tracking in long-term studies <strong>”different devices”</strong>, breaking tracking and flow estimation.</p>
-          <p><strong>🔧 Solution:</strong> Collect data inside a moving vehicle (public transport) with very high-frequency scanning (near-continuous logging). Second-by-second records detect identifier changes: <strong>”old”</strong> ID disappears, <strong>”new”</strong> ID appears at the same timestamp, allowing reconnection into a single trip. Setup: laptops with external Bluetooth adapters (phones not ideal due to battery/OS cevices randomize identifiers over time for privacy. One person can appear as severonstraints). </p>
+          <p><strong>🔧 Solution:</strong> Collect data inside a moving vehicle (public transport) with very high-frequency scanning (near-continuous logging). Second-by-second records detect identifier changes: <strong>”old”</strong> ID disappears, <strong>”new”</strong> ID appears at the same timestamp, allowing reconnection into a single trip. Setup: laptops with external Bluetooth adapters (phones not ideal due to battery/OS cevices randomize identifiers over time for privacy. One person can appear as severe constrains). </p>
           <p><strong>✅ Results:</strong> Map demonstrates meaningful mobility structure under privacy constraints. Sample route (bus #27): strongest flows link industrial entry points (metallurgical plant) with residential districts across the river, connecting city center with residential areas—patterns consistent with commuting and daily urban movement.</p>
           <p>
           <a href='files/Presentation_ECTQG.pdf' target='_blank'>
@@ -154,7 +167,7 @@
     <p>Spatial factors shaping outdoor sports comfort in Astana | <span style="color: #02b145; font-weight: bold;">GIS-based suitability mapping</span></p>
 </div>
 
-<div class="portfolio-item" onclick="openModal('images/5.png', 'Belaya Berel Route', `
+<div class="portfolio-item" onclick="openModal('images/5.png', 'Belaya Berel touristic route', `
     <div style='text-align: center;'>
       <p><strong>🎨 Goal:</strong> GIS-based assessment of scenic viewpoint quality for tourist route in Katon-Karagay National Park. Make <strong>'aesthetic value'</strong> comparable and transparent through consistent, repeatable scoring.</p>
       <p><strong>📊 Method:</strong> Five GIS-computed indicators: mountain-peak abundance, perspective depth/variety, water features, landscape naturalness, forest cover. Data: 30m SRTM DEM and Landcover 2020. For each point: created viewshed (1.6 m observer height) as mask for all calculations. Mountain peaks via Topographic Position Index (TPI); perspective depth separates near views (within 1.5 km) and far views (beyond 1.5 km)—higher scores for both. Automated in ArcMap 10.8 (ModelBuilder).</p>
@@ -165,7 +178,7 @@
             </a>
         </p>
     </div>`)">
-    <img src="images/5.png" alt="Belaya Berel Route">
+    <img src="images/5.png" alt="Belaya Berel touristic route">
     <p>Coursework: Belaya Berel Route (Katon-Karagay National Park) | <span style="color: #facc00; font-weight: bold;">Aesthetic Landscape Evaluation Map</span></p>
 </div>
 
@@ -182,7 +195,7 @@
     <p>Functional Zoning of Karaganda: Land Use, Centers, and Spatial Barriers (2024) </p>
 </div>
 
-<div class="portfolio-item" onclick="openModal('images/7.gif', 'Mapping Download Speed in Almaty (2020–2025)', `
+<div class="portfolio-item" onclick="openModal('images/7.gif', 'Mapping Data download speed in Almaty (2020–2025)', `
     <div style='text-align: center;'>
       <p><strong>💡 Origin:</strong> On our latest seminar on urban ecology, our teacher Tolegen Akynzhanov showed us an interesting dataset provided by Ookla, based on well-known <strong>”Speedtest”</strong> data. So, I made my own little research based on this data.</p>
       <p><strong>📊 Animation description:</strong> Each square is a ~500 m grid cell coloured by recorded download speed in Mb/s in Almaty city from 2020 to 2025.</p>
@@ -194,24 +207,25 @@
             </a>
         </p>
     </div>`)">
-    <img src="images/7.gif" alt="Mapping Download Speed in Almaty (2020–2025)">
-    <p>Mapping Download Speed in Almaty | <span style="color: #ff0000; font-weight: bold;">2020-2025</span> </p>
+    <img src="images/7.gif" alt="Mapping Data download speed in Almaty (2020–2025)">
+    <p>Mapping Data download speed in Almaty | <span style="color: #ff0000; font-weight: bold;">2020-2025</span> </p>
 </div>
 
 <div class="portfolio-item" onclick="openModal('images/8.gif', 'Functional Zoning of Karaganda: Land Use, Centers, and Spatial Barriers (2024)', `
     <div style='text-align: center;'>
       <p><strong>☀️ Goal:</strong> Estimate rooftop solar PV potential in Astana, visualize as building-level annual electricity generation (kWh/year). Map shows which roofs are realistically usable and annual output magnitude across city districts.</p>
       <p><strong>📊 Method (two-step workflow):</strong></p>
-      <ol>
+     <ol>
         <li><strong>Suitability screening:</strong> Excludes impractical roofs (geometry/orientation constraints, fragmented/too-small areas) → shown as unsuitable on map.</li>
-        <li><strong>Energy-yield calculation:</strong> For remaining roofs, modeled solar input (terrain/roof geometry—slope and aspect—plus shading) converted to annual generation via engineering conversion:</li>
+        <li><strong>Energy-yield calculation:</strong> For remaining roofs, modeled solar input (terrain/roof geometry—slope and aspect—plus shading) converted to annual generation via engineering conversion:
+          <ul style='margin-top: 0.3em; margin-bottom: 0.3em; padding-left: 1.2em;'>
+            <li style='margin-top: 0; margin-bottom: 0; line-height: 1.2;'>Usable roof area</li>
+            <li style='margin-top: 0; margin-bottom: 0; line-height: 1.2;'>Installable PV area (packing/spacing factor)</li>
+            <li style='margin-top: 0; margin-bottom: 0; line-height: 1.2;'>Installed capacity</li>
+            <li style='margin-top: 0; margin-bottom: 0; line-height: 1.2;'>Annual kWh (panel efficiency + performance-loss factor: inverter/temperature/soiling)</li>
+          </ul>
+        </li>
       </ol>
-      <ul>
-        <li>Usable roof area</li>
-        <li>Installable PV area (packing/spacing factor)</li>
-        <li>Installed capacity</li>
-        <li>Annual kWh (panel efficiency + performance-loss factor: inverter/temperature/soiling)</li>
-      </ul>
       <p><strong>🗺️ Results:</strong> Map classifies buildings by annual generation bands (&lt;50,000 to &gt;150,000 kWh/year), making spatial differences readable across Astana's districts.</p>
       <p><strong>💡 Key takeaway:</strong> PV potential highly uneven at building scale—many roofs with modest yield, but smaller share of large, well-oriented roofs concentrates highest annual generation class (efficient deployment targets).</p>
                     
